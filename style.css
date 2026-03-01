@@ -1,6 +1,6 @@
 :root {
   --cinza: #E9E9E9;
-  --verde: #D8F006;
+  --verde: hsl(66, 95%, 48%);
   --preto: #161616;
   --branco: #FFFFFF;
   --negro: #000000;
@@ -378,7 +378,6 @@ section {
 
 .projeto-card {
   background: var(--preto);
-  padding: 2.5rem;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -417,7 +416,6 @@ section {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 0.25rem 0.7rem;
     border-radius: 1px;
     margin-bottom: 1rem;
   }
@@ -438,7 +436,7 @@ section {
   }
 
   .projeto-arrow {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -458,6 +456,19 @@ section {
     padding: 3rem 5vw;
     overflow: hidden;
   }
+  #projeto {
+  background: var(--preto);
+  position: relative;
+  overflow: hidden;
+}
+
+#projeto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+}
 
   .strip-track {
     display: flex;
@@ -487,6 +498,57 @@ section {
     border-radius: 50%;
     background: rgba(0,0,0,0.3);
     flex-shrink: 0;
+  }
+
+  /* ─── PROJETO DESTAQUE ─── */
+  #projeto {
+    background: var(--preto);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ─── PROJETO DESTAQUE ─── */
+  .projeto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .projeto-text h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+    color: var(--verde);
+    margin-bottom: 1.5rem;
+  }
+
+  .projeto-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(233,233,233,0.7);
+  }
+
+  .projeto-iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projeto-iframe iframe {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 12px;
+  }
+
+  @media (max-width: 900px) {
+    .projeto-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
   }
 
   /* ─── CONTATO ─── */
