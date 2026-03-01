@@ -107,6 +107,7 @@ nav a:hover::after { width: 100%; }
   margin-top: 20px;
   position: relative;
   overflow: hidden;
+  text-align: justify;
 }
 
 /* grid lines bg */
@@ -308,6 +309,7 @@ section {
   line-height: 1.8;
   color: rgba(233,233,233,0.7);
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .sobre-text p strong { color: var(--branco); font-weight: 500; }
@@ -318,6 +320,7 @@ section {
   gap: 1.5px;
   background: rgba(216,240,6,0.08);
   border: 1px solid rgba(216,240,6,0.08);
+  text-align: justify;
 }
 
 .sobre-card {
@@ -380,8 +383,10 @@ section {
   background: var(--preto);
   position: relative;
   overflow: hidden;
+  padding: 2rem;
   cursor: pointer;
   transition: background 0.3s;
+  text-align: justify;
 }
 
 .projeto-card::before {
@@ -522,13 +527,16 @@ section {
     letter-spacing: 0.04em;
     color: var(--verde);
     margin-bottom: 1.5rem;
+    text-align: justify;
   }
 
   .projeto-text p {
     font-size: 1.05rem;
     line-height: 1.8;
     color: rgba(233,233,233,0.7);
+    text-align: justify;
   }
+  .projeto-text p strong { color: var(--branco); font-weight: 500; }
 
   .projeto-iframe {
     display: flex;
@@ -615,12 +623,14 @@ section {
     text-transform: uppercase;
     color: rgba(233,233,233,0.35);
     margin-bottom: 0.2rem;
+    text-align: justify;
   }
 
   .contato-item-text strong {
     font-size: 0.95rem;
     color: var(--cinza);
     font-weight: 400;
+    text-align: justify;
   }
 
   /* FORM */
@@ -719,34 +729,6 @@ section {
   }
 
   .footer-links a:hover { color: var(--verde); }
-
-  /* ─── SCROLL INDICATOR ─── */
-  .scroll-line {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 5vw;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(233,233,233,0.35);
-    animation: fadeUp 1s 0.6s ease both;
-  }
-
-  .scroll-line::before {
-    content: '';
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, transparent, var(--verde));
-    animation: scrollPulse 2s ease infinite;
-  }
-
-  @keyframes scrollPulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
-  }
 
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
